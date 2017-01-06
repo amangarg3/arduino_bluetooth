@@ -8,6 +8,10 @@
         "source": "/home/aman/android_bluetooth_final/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
     },
     {
+        "merged": "/home/aman/new_android_bluetooth_final/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/home/aman/new_android_bluetooth_final/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
         "merged": "/home/aman/ArduinoBluetooth2/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
         "source": "/home/aman/ArduinoBluetooth2/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
     },
@@ -22,5 +26,9 @@
     {
         "merged": "/home/aman/android_bluetooth_final/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
         "source": "/home/aman/android_bluetooth_final/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "/home/aman/new_android_bluetooth_final/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/home/aman/new_android_bluetooth_final/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
     }
 ]

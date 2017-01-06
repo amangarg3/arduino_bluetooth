@@ -45,10 +45,8 @@ public final class Main2Activity extends BaseActivity {
     private static DeviceConnector connector;
     private static BluetoothResponseHandler mHandler;
     private String deviceName;
-TextView recieved_packet;
 
-
-
+    TextView recieved_packet;
 
         @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,16 +76,15 @@ TextView recieved_packet;
             h.setTypeface(typeface);
 
 
-            if (mHandler == null) mHandler = new BluetoothResponseHandler(this);
-        else mHandler.setTarget(this);
+            if (mHandler == null)
+                mHandler = new BluetoothResponseHandler(this);
+            else mHandler.setTarget(this);
 
         MSG_NOT_CONNECTED = getString(R.string.msg_not_connected);
         MSG_CONNECTING = getString(R.string.msg_connecting);
         MSG_CONNECTED = getString(R.string.msg_connected);
 
-        recieved_packet= (TextView) findViewById(R.id.recieved_packet);
-
-
+        recieved_packet = (TextView) findViewById(R.id.recieved_packet);
 
         if (isConnected() && (savedInstanceState != null)) {
             setDeviceName(savedInstanceState.getString(DEVICE_NAME));
@@ -203,7 +200,7 @@ TextView recieved_packet;
 
     }
     public void connect(View v){
-sendCommand("hello @ Banaoo\n");
+    sendCommand("hello @ Banaoo\n");
     }
 
     @SuppressLint("DefaultLocale")
@@ -262,9 +259,8 @@ sendCommand("hello @ Banaoo\n");
     // ============================================================================
 
 
-    void setRecieveed_data( String data){
-recieved_packet.setText(data);
-
+    void setRecieveed_data(String data){
+        recieved_packet.setText(data);
     }
 
     @Override
@@ -360,7 +356,7 @@ recieved_packet.setText(data);
                         break;
                     case MESSAGE_READ:
                         final String readMessage = (String) msg.obj;
-                       activity.setRecieveed_data(readMessage);
+                        activity.setRecieveed_data(readMessage);
                         break;
 
                     case MESSAGE_DEVICE_NAME:
@@ -378,7 +374,23 @@ recieved_packet.setText(data);
             }
         }
     }
-    // ==========================================================================
+
+    public void insertData(String receivedData) {
+        r = new Records();
+        Calendar cal1 = Calendar.getInstance();
+        SimpleDateFormat time = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
+
+        String stime = time.format(cal1.getTime());
+
+        r.setId(3);
+        r.setDatenTime(stime);
+        r.setValue(receivedData);
+
+        DatabaseClass insData = new DatabaseClass(this);
+        insData.open();
+        insData.insertdata(r);
+        insData.close();
+    }
 }
 
 

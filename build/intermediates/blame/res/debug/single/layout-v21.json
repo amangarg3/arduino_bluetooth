@@ -20,6 +20,14 @@
         "source": "/home/aman/ArduinoBluetooth2/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/layout-v21/notification_template_icon_group.xml"
     },
     {
+        "merged": "/home/aman/new_android_bluetooth_final/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/home/aman/new_android_bluetooth_final/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/home/aman/new_android_bluetooth_final/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/home/aman/new_android_bluetooth_final/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
         "merged": "/home/aman/android_bluetooth_final/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
         "source": "/home/aman/android_bluetooth_final/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/layout-v21/notification_template_custom_big.xml"
     },
@@ -40,8 +48,16 @@
         "source": "/home/aman/android_bluetooth_final/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/layout-v21/notification_action_tombstone.xml"
     },
     {
+        "merged": "/home/aman/new_android_bluetooth_final/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/home/aman/new_android_bluetooth_final/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/layout-v21/notification_action.xml"
+    },
+    {
         "merged": "/home/aman/android_bluetooth_final/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
         "source": "/home/aman/android_bluetooth_final/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/home/aman/new_android_bluetooth_final/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/home/aman/new_android_bluetooth_final/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/layout-v21/notification_template_custom_big.xml"
     },
     {
         "merged": "/home/aman/android_bluetooth/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
