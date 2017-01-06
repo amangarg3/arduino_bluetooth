@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/aman/android_bluetooth_final/build/intermediates/res/merged/debug/xml/settings_activity.xml",
+        "source": "/home/aman/android_bluetooth_final/src/main/res/xml/settings_activity.xml"
+    },
+    {
+        "merged": "/home/aman/android_bluetooth/build/intermediates/res/merged/debug/xml/settings_activity.xml",
+        "source": "/home/aman/android_bluetooth/src/main/res/xml/settings_activity.xml"
+    },
+    {
+        "merged": "/home/aman/ArduinoBluetooth2/build/intermediates/res/merged/debug/xml/settings_activity.xml",
+        "source": "/home/aman/ArduinoBluetooth2/src/main/res/xml/settings_activity.xml"
+    }
+]

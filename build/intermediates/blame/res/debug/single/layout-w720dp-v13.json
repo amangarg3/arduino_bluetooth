@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/aman/ArduinoBluetooth2/build/intermediates/res/merged/debug/layout-w720dp-v13/activity_main.xml",
+        "source": "/home/aman/ArduinoBluetooth2/src/main/res/layout-w720dp/activity_main.xml"
+    },
+    {
+        "merged": "/home/aman/android_bluetooth_final/build/intermediates/res/merged/debug/layout-w720dp-v13/activity_main.xml",
+        "source": "/home/aman/android_bluetooth_final/src/main/res/layout-w720dp/activity_main.xml"
+    },
+    {
+        "merged": "/home/aman/android_bluetooth/build/intermediates/res/merged/debug/layout-w720dp-v13/activity_main.xml",
+        "source": "/home/aman/android_bluetooth/src/main/res/layout-w720dp/activity_main.xml"
+    }
+]

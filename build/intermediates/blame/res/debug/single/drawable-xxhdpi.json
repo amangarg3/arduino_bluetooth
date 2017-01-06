@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "/home/aman/android_bluetooth_final/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_drawer.png",
+        "source": "/home/aman/android_bluetooth_final/src/main/res/drawable-xxhdpi/ic_drawer.png"
+    },
+    {
+        "merged": "/home/aman/ArduinoBluetooth2/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_action_device_access_bluetooth_searching.png",
+        "source": "/home/aman/ArduinoBluetooth2/src/main/res/drawable-xxhdpi/ic_action_device_access_bluetooth_searching.png"
+    },
+    {
+        "merged": "/home/aman/android_bluetooth/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_drawer.png",
+        "source": "/home/aman/android_bluetooth/src/main/res/drawable-xxhdpi/ic_drawer.png"
+    },
+    {
+        "merged": "/home/aman/ArduinoBluetooth2/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_drawer.png",
+        "source": "/home/aman/ArduinoBluetooth2/src/main/res/drawable-xxhdpi/ic_drawer.png"
+    },
+    {
+        "merged": "/home/aman/ArduinoBluetooth2/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_launcher.png",
+        "source": "/home/aman/ArduinoBluetooth2/src/main/res/drawable-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/aman/android_bluetooth_final/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_launcher.png",
+        "source": "/home/aman/android_bluetooth_final/src/main/res/drawable-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/aman/android_bluetooth_final/build/intermediates/res/merged/debug/drawable-xxhdpi/drawer_shadow.9.png",
+        "source": "/home/aman/android_bluetooth_final/src/main/res/drawable-xxhdpi/drawer_shadow.9.png"
+    },
+    {
+        "merged": "/home/aman/android_bluetooth/build/intermediates/res/merged/debug/drawable-xxhdpi/drawer_shadow.9.png",
+        "source": "/home/aman/android_bluetooth/src/main/res/drawable-xxhdpi/drawer_shadow.9.png"
+    },
+    {
+        "merged": "/home/aman/android_bluetooth_final/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_action_device_access_bluetooth_searching.png",
+        "source": "/home/aman/android_bluetooth_final/src/main/res/drawable-xxhdpi/ic_action_device_access_bluetooth_searching.png"
+    },
+    {
+        "merged": "/home/aman/android_bluetooth/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_action_device_access_bluetooth_searching.png",
+        "source": "/home/aman/android_bluetooth/src/main/res/drawable-xxhdpi/ic_action_device_access_bluetooth_searching.png"
+    },
+    {
+        "merged": "/home/aman/ArduinoBluetooth2/build/intermediates/res/merged/debug/drawable-xxhdpi/drawer_shadow.9.png",
+        "source": "/home/aman/ArduinoBluetooth2/src/main/res/drawable-xxhdpi/drawer_shadow.9.png"
+    },
+    {
+        "merged": "/home/aman/android_bluetooth/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_launcher.png",
+        "source": "/home/aman/android_bluetooth/src/main/res/drawable-xxhdpi/ic_launcher.png"
+    }
+]
