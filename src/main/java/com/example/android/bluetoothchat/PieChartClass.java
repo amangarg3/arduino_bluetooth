@@ -15,7 +15,6 @@ import com.github.mikephil.charting.utils.ColorTemplate;
 import java.util.ArrayList;
 
 public class PieChartClass extends AppCompatActivity {
-    //DatabaseHelper dbhelper = new DatabaseHelper(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,12 +45,12 @@ public class PieChartClass extends AppCompatActivity {
 
         do{
 
-            a = Integer.parseInt(c.getString(1));
+            a = Integer.parseInt(c.getString(2));
             entries.add(new Entry(a, i));
 
             i++;
 
-            labels.add(c.getString(2));
+            labels.add(c.getString(1));
 
         }
         while(c.moveToNext());

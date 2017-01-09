@@ -18,19 +18,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="13dp"
-        android:layout_marginEnd="13dp">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            app:srcCompat="@drawable/banaao"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/imageView"
-            android:layout_weight="1" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:orientation="vertical"
@@ -125,13 +114,22 @@
         </LinearLayout>
 
         <TextView
-            android:text="TextView"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/linearLayout2"
-            android:layout_alignLeft="@+id/d"
-            android:layout_alignStart="@+id/d"
-            android:id="@+id/recieved_packet" />
+            android:layout_below="@+id/imageView"
+            android:id="@+id/recieved_packet1"
+            android:layout_alignTop="@+id/linearLayout2" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            app:srcCompat="@drawable/banaao"
+            android:id="@+id/imageView"
+            android:layout_weight="1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp" />
 
     </RelativeLayout>
 

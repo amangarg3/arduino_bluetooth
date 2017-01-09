@@ -1,50 +1,14 @@
 [
     {
-        "merged": "/home/aman/android_bluetooth_final/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png",
-        "source": "/home/aman/android_bluetooth_final/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
+        "merged": "/home/aman/Downloads/new_swb/arduino_bluetooth_new/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png",
+        "source": "/home/aman/Downloads/new_swb/arduino_bluetooth_new/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "/home/aman/ArduinoBluetooth2/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png",
-        "source": "/home/aman/ArduinoBluetooth2/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
+        "merged": "/home/aman/Downloads/new_swb/arduino_bluetooth_new/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png",
+        "source": "/home/aman/Downloads/new_swb/arduino_bluetooth_new/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable-ldrtl-xxxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
-        "merged": "/home/aman/new_android_bluetooth_final/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png",
-        "source": "/home/aman/new_android_bluetooth_final/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable-ldrtl-xxxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
-        "merged": "/home/aman/android_bluetooth_final/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png",
-        "source": "/home/aman/android_bluetooth_final/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable-ldrtl-xxxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
-        "merged": "/home/aman/new_android_bluetooth_final/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png",
-        "source": "/home/aman/new_android_bluetooth_final/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
-    },
-    {
-        "merged": "/home/aman/android_bluetooth/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png",
-        "source": "/home/aman/android_bluetooth/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable-ldrtl-xxxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
-        "merged": "/home/aman/new_android_bluetooth_final/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png",
-        "source": "/home/aman/new_android_bluetooth_final/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png"
-    },
-    {
-        "merged": "/home/aman/ArduinoBluetooth2/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png",
-        "source": "/home/aman/ArduinoBluetooth2/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png"
-    },
-    {
-        "merged": "/home/aman/ArduinoBluetooth2/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png",
-        "source": "/home/aman/ArduinoBluetooth2/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable-ldrtl-xxxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
-        "merged": "/home/aman/android_bluetooth/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png",
-        "source": "/home/aman/android_bluetooth/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
-    },
-    {
-        "merged": "/home/aman/android_bluetooth/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png",
-        "source": "/home/aman/android_bluetooth/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png"
-    },
-    {
-        "merged": "/home/aman/android_bluetooth_final/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png",
-        "source": "/home/aman/android_bluetooth_final/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png"
+        "merged": "/home/aman/Downloads/new_swb/arduino_bluetooth_new/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png",
+        "source": "/home/aman/Downloads/new_swb/arduino_bluetooth_new/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png"
     }
 ]

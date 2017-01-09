@@ -7,41 +7,49 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.android.DatabaseClass;
 
 public class disData extends AppCompatActivity {
-    //DatabaseHelper db = new DatabaseHelper(this);
+
     DatabaseClass data = new DatabaseClass(this);
-
     ListView lv;
-
+    String s = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dis_data);
+       // setContentView(R.layout.activity_dis_data);
+        setContentView(R.layout.display_data);
         lv = (ListView) findViewById(R.id.lv);
         data.open();
         populateListView();
     }
 
     public void populateListView(){
-        Cursor c = data.getRecord();
-        String[] Field = new String[] {data.CVAL, data.CDnT};
-        int[] ids = new int[] {R.id.dnt, R.id.val};
+        Cursor c = data.getRecordWeek();
+        TextView t = (TextView)findViewById(R.id.textView5);
 
-        Toast.makeText(this, data.CVAL +" "+ data.CDnT, Toast.LENGTH_LONG).show();
+        /*  String[] Field = new String[] {data.CD, data.CT, data.CVAL};
+        int[] ids = new int[] {R.id.date, R.id.time, R.id.val};
+
+       // Toast.makeText(this, data.CVAL +" "+ data.CDnT, Toast.LENGTH_LONG).show();
         SimpleCursorAdapter simpleCursorAdapter;
         simpleCursorAdapter = new SimpleCursorAdapter(this, R.layout.listform, c, Field, ids, 0);
         lv.setAdapter(simpleCursorAdapter);
+        */
+
+        do{
+            s += c.getString(0)+" "+c.getString(1)+" "+c.getString(2)+"\n";
+
+        }while (c.moveToNext());
+
+        t.setText(s);
     }
 
-    public void deleteData(View v){
-
+    public void deleteData1(View v){
         data.eraseData();
-        populateListView();
-
     }
 
 }

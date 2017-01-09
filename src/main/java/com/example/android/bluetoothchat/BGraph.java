@@ -19,8 +19,6 @@ import static android.R.attr.entries;
 
 public class BGraph extends AppCompatActivity {
 
-  //  DatabaseHelper db = new DatabaseHelper(this);
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,10 +50,10 @@ public class BGraph extends AppCompatActivity {
         ArrayList<String> labels = new ArrayList<String>();
 
         do{
-            a = Integer.parseInt(c.getString(1));
+            a = Integer.parseInt(c.getString(2));
             entries.add(new BarEntry(a, i));
             i++;
-            labels.add(c.getString(2));
+            labels.add(c.getString(1));
         }
         while(c.moveToNext());
 

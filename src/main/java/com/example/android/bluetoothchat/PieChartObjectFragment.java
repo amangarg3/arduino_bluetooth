@@ -24,7 +24,7 @@ import java.util.ArrayList;
 
 public class PieChartObjectFragment extends Fragment {
     public static final String ARG_OBJECT = "object";
-    String Tag = "sdv";
+
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -57,10 +57,10 @@ public class PieChartObjectFragment extends Fragment {
         ArrayList<String> labels = new ArrayList<String>();
 
         do {
-            a = Integer.parseInt(c.getString(1));
+            a = Integer.parseInt(c.getString(2));
             entries.add(new Entry(a, i));
             i++;
-            labels.add(c.getString(2));
+            labels.add(c.getString(1));
         }
         while (c.moveToNext());
 

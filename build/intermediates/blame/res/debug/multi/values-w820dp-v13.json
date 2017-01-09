@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/home/aman/android_bluetooth_final/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w820dp-v13/values-w820dp-v13.xml",
+        "outputFile": "/home/aman/Downloads/new_swb/arduino_bluetooth_new/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w820dp-v13/values-w820dp-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,13 +11,13 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "/home/aman/android_bluetooth_final/src/main/res/values-w820dp/dimens.xml",
+                    "file": "/home/aman/Downloads/new_swb/arduino_bluetooth_new/src/main/res/values-w820dp/dimens.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 291,
+                        "startOffset": 295,
                         "endColumn": 57,
-                        "endOffset": 344
+                        "endOffset": 348
                     }
                 }
             },
@@ -31,14 +31,14 @@
                     "endOffset": 427
                 },
                 "from": {
-                    "file": "/home/aman/android_bluetooth_final/src/main/res/values-w820dp/styles.xml",
+                    "file": "/home/aman/Downloads/new_swb/arduino_bluetooth_new/src/main/res/values-w820dp/styles.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 55,
+                        "startOffset": 59,
                         "endLine": 9,
                         "endColumn": 12,
-                        "endOffset": 369
+                        "endOffset": 378
                     }
                 }
             },
@@ -51,205 +51,13 @@
                     "endOffset": 501
                 },
                 "from": {
-                    "file": "/home/aman/android_bluetooth_final/src/main/res/values-w820dp/styles.xml",
+                    "file": "/home/aman/Downloads/new_swb/arduino_bluetooth_new/src/main/res/values-w820dp/styles.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
-                        "startOffset": 375,
+                        "startOffset": 386,
                         "endColumn": 73,
-                        "endOffset": 444
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "/home/aman/new_android_bluetooth_final/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w820dp-v13/values-w820dp-v13.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 57,
-                    "endOffset": 108
-                },
-                "from": {
-                    "file": "/home/aman/new_android_bluetooth_final/src/main/res/values-w820dp/dimens.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 291,
-                        "endColumn": 57,
-                        "endOffset": 344
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 3,
-                    "startColumn": 4,
-                    "startOffset": 113,
-                    "endLine": 8,
-                    "endColumn": 12,
-                    "endOffset": 427
-                },
-                "from": {
-                    "file": "/home/aman/new_android_bluetooth_final/src/main/res/values-w820dp/styles.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endLine": 9,
-                        "endColumn": 12,
-                        "endOffset": 369
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 9,
-                    "startColumn": 4,
-                    "startOffset": 432,
-                    "endColumn": 73,
-                    "endOffset": 501
-                },
-                "from": {
-                    "file": "/home/aman/new_android_bluetooth_final/src/main/res/values-w820dp/styles.xml",
-                    "position": {
-                        "startLine": 11,
-                        "startColumn": 4,
-                        "startOffset": 375,
-                        "endColumn": 73,
-                        "endOffset": 444
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "/home/aman/ArduinoBluetooth2/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w820dp-v13/values-w820dp-v13.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 57,
-                    "endOffset": 108
-                },
-                "from": {
-                    "file": "/home/aman/ArduinoBluetooth2/src/main/res/values-w820dp/dimens.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 291,
-                        "endColumn": 57,
-                        "endOffset": 344
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 3,
-                    "startColumn": 4,
-                    "startOffset": 113,
-                    "endLine": 8,
-                    "endColumn": 12,
-                    "endOffset": 427
-                },
-                "from": {
-                    "file": "/home/aman/ArduinoBluetooth2/src/main/res/values-w820dp/styles.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endLine": 9,
-                        "endColumn": 12,
-                        "endOffset": 369
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 9,
-                    "startColumn": 4,
-                    "startOffset": 432,
-                    "endColumn": 73,
-                    "endOffset": 501
-                },
-                "from": {
-                    "file": "/home/aman/ArduinoBluetooth2/src/main/res/values-w820dp/styles.xml",
-                    "position": {
-                        "startLine": 11,
-                        "startColumn": 4,
-                        "startOffset": 375,
-                        "endColumn": 73,
-                        "endOffset": 444
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "/home/aman/android_bluetooth/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w820dp-v13/values-w820dp-v13.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 57,
-                    "endOffset": 108
-                },
-                "from": {
-                    "file": "/home/aman/android_bluetooth/src/main/res/values-w820dp/dimens.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 291,
-                        "endColumn": 57,
-                        "endOffset": 344
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 3,
-                    "startColumn": 4,
-                    "startOffset": 113,
-                    "endLine": 8,
-                    "endColumn": 12,
-                    "endOffset": 427
-                },
-                "from": {
-                    "file": "/home/aman/android_bluetooth/src/main/res/values-w820dp/styles.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endLine": 9,
-                        "endColumn": 12,
-                        "endOffset": 369
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 9,
-                    "startColumn": 4,
-                    "startOffset": 432,
-                    "endColumn": 73,
-                    "endOffset": 501
-                },
-                "from": {
-                    "file": "/home/aman/android_bluetooth/src/main/res/values-w820dp/styles.xml",
-                    "position": {
-                        "startLine": 11,
-                        "startColumn": 4,
-                        "startOffset": 375,
-                        "endColumn": 73,
-                        "endOffset": 444
+                        "endOffset": 455
                     }
                 }
             }

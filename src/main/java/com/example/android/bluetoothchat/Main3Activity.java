@@ -23,7 +23,10 @@ import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 public class Main3Activity extends ActionBarActivity {
 
@@ -54,22 +57,23 @@ public class Main3Activity extends ActionBarActivity {
                 // show the given tab
                 // mViewPager.setCurrentItem(tab.getPosition());
                 if(tab.getPosition()==0) {
-                    Toast.makeText(getApplication(), "tab0", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(getApplication(), "tab0", Toast.LENGTH_LONG).show();
                     graphPageAdapter =
                             new GraphPageAdapter(
                                     getSupportFragmentManager());
                     mViewPager = (ViewPager) findViewById(R.id.pager);
                     mViewPager.setAdapter(graphPageAdapter);
+                    mViewPager.setCurrentItem(100);
                 }
 
                 if(tab.getPosition()==1) {
-                    Toast.makeText(getApplication(), "tab1", Toast.LENGTH_LONG).show();
-
+                   // Toast.makeText(getApplication(), "tab1", Toast.LENGTH_LONG).show();
                     mDemoCollectionPagerAdapter =
                             new DemoCollectionPagerAdapter(
                                     getSupportFragmentManager());
                     mViewPager = (ViewPager) findViewById(R.id.pager);
                     mViewPager.setAdapter(mDemoCollectionPagerAdapter);
+                    mViewPager.setCurrentItem(100);
                 }
                 if(tab.getPosition()==2){
                     pieChartPageAdapter =
@@ -77,6 +81,7 @@ public class Main3Activity extends ActionBarActivity {
                                     getSupportFragmentManager());
                     mViewPager = (ViewPager) findViewById(R.id.pager);
                     mViewPager.setAdapter(pieChartPageAdapter);
+                    mViewPager.setCurrentItem(100);
                 }
             }
 
@@ -96,9 +101,6 @@ public class Main3Activity extends ActionBarActivity {
                             .setText(tab_name)
                             .setTabListener(tabListener));
         }
-
-        // ViewPager and its adapters use support library
-        // fragments, so use getSupportFragmentManager.
 
     }
 
@@ -130,6 +132,7 @@ public class Main3Activity extends ActionBarActivity {
 
     public static class DemoObjectFragment extends Fragment {
         public static final String ARG_OBJECT = "object";
+        String[] weekdays = new String[]{"Mon","Tue","Wed","Thu","Fri","Sat","Sun"};
 
         @Override
         public View onCreateView(LayoutInflater inflater,
@@ -138,17 +141,29 @@ public class Main3Activity extends ActionBarActivity {
             // properly.
             View rootView = inflater.inflate(
                     R.layout.fragment_collection_object, container, false);
+
             Bundle args = getArguments();
             ((TextView) rootView.findViewById(R.id.text1)).setText(
                     Integer.toString(args.getInt(ARG_OBJECT)));
 
             barChart = (BarChart) rootView.findViewById(R.id.bar_graph1);
-            //  HorizontalBarChart hbarChart = (HorizontalBarChart) findViewById(R.id.hbar_graph);  for horizontal graph
 
-            Cursor c=null;
+            Cursor c = null;
+
+           /* String[] d;
+            SimpleDateFormat date = new SimpleDateFormat("dd-MM-yyyy");
+            String entry_data = date.format(new Date());
+            */
+
+            Calendar calendar = Calendar.getInstance();
+            int day = calendar.get(Calendar.DAY_OF_WEEK);
+
             DatabaseClass bgraphData = new DatabaseClass(getActivity());
             bgraphData.open();
-            int icount = bgraphData.countRows();
+            int icount = bgraphData.countRowsWeek();
+            int x = icount/7;
+            x++;
+            int y = icount%7;
             if(icount==0)
             {
                 Toast.makeText(getActivity(),"Database is empty so can't display the graph",Toast.LENGTH_LONG).show();
@@ -156,24 +171,53 @@ public class Main3Activity extends ActionBarActivity {
                 return rootView;
             }
             else {
-                c = bgraphData.getRecord();
+                c = bgraphData.getRecordWeek("week"+x);
+               // d = bgraphData.getDayData(entry_data);
                 bgraphData.close();
             }
             //int icount = c.getInt(0);
             int a, i=0;
-
+           // int b=1;
             ArrayList<BarEntry> entries = new ArrayList();
             ArrayList<String> labels = new ArrayList<String>();
 
-            do{
+           /* do{
                 a = Integer.parseInt(c.getString(1));
                 entries.add(new BarEntry(a, i));
                 i++;
                 labels.add(c.getString(2));
             }
             while(c.moveToNext());
+            */
+            day = day - y;
+            if(day<0)
+                day = day+7;
 
-            dataset = new BarDataSet(entries,"# of Calls" );
+            do{
+                a = Integer.parseInt(c.getString(1));
+                entries.add(new BarEntry(a, i));
+                i++;
+                labels.add(weekdays[day]);
+                day++;
+                if(day==7){
+                    day=0;
+                }
+            }while(c.moveToNext());
+
+           /* do{
+                if(d[b-1]==null)
+                    break;
+
+                String[] parts = d[b-1].split(".");
+                b++;
+                a = Integer.parseInt(parts[1]);
+                entries.add(new BarEntry(a, i));
+                i++;
+                labels.add(parts[0]);
+            }while (b!= d.length);
+            */
+
+            dataset = new BarDataSet(entries,"Water Level per day");
 
             data = new BarData(labels, dataset);
             barChart.setData(data);
@@ -189,6 +233,7 @@ public class Main3Activity extends ActionBarActivity {
 }
 
 /*
+
 Bundle args = getArguments();
             Typeface typeface= Typeface.createFromAsset(rootView.findViewById(R.id.text1).getContext().getAssets(), "fonts/OpenSansRegular.ttf");
             TextView t = (TextView) rootView.findViewById(R.id.text1);
@@ -197,4 +242,5 @@ Bundle args = getArguments();
             ((TextView) rootView.findViewById(R.id.text1)).setText(
                     Integer.toString(args.getInt(ARG_OBJECT)));
             return rootView;
- */
+
+*/

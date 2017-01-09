@@ -18,35 +18,24 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.android.DatabaseClass;
 
 import java.lang.ref.WeakReference;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 import static android.R.attr.typeface;
 
-
 public final class Main2Activity extends BaseActivity {
-    private static final String DEVICE_NAME = "DEVICE_NAME";
-    private static final String LOG = "LOG";
+
     Records r;
-
-    private static final SimpleDateFormat timeformat = new SimpleDateFormat("HH:mm:ss.SSS");
-
-    private static String MSG_NOT_CONNECTED;
-    private static String MSG_CONNECTING;
-    private static String MSG_CONNECTED;
-
-    private static DeviceConnector connector;
-    private static BluetoothResponseHandler mHandler;
-    private String deviceName;
-
-    TextView recieved_packet;
+    Week_Records wr;
 
         @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,91 +64,31 @@ public final class Main2Activity extends BaseActivity {
             g.setTypeface(typeface);
             h.setTypeface(typeface);
 
+            r = new Records();
+            wr = new Week_Records();
+            Calendar cal1 = Calendar.getInstance();
+            SimpleDateFormat date = new SimpleDateFormat("dd-MM-yyyy");
+            String entry_data = date.format(cal1.getTime());
 
-            if (mHandler == null)
-                mHandler = new BluetoothResponseHandler(this);
-            else mHandler.setTarget(this);
+            SimpleDateFormat time = new SimpleDateFormat("HH:MM:SS");
+            String entry_time = time.format(new Date());
 
-        MSG_NOT_CONNECTED = getString(R.string.msg_not_connected);
-        MSG_CONNECTING = getString(R.string.msg_connecting);
-        MSG_CONNECTED = getString(R.string.msg_connected);
+            r.setDate(entry_data);
+            r.setTime(entry_time);
+            r.setValue("6");
 
-        recieved_packet = (TextView) findViewById(R.id.recieved_packet);
+            wr.setWeekDate(entry_data);
+            wr.setWeekValue("4");
 
-        if (isConnected() && (savedInstanceState != null)) {
-            setDeviceName(savedInstanceState.getString(DEVICE_NAME));
-        } else getSupportActionBar().setSubtitle(MSG_NOT_CONNECTED);
-
-        r = new Records();
-
-        Calendar cal1 = Calendar.getInstance();
-        SimpleDateFormat time = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
-
-        String stime = time.format(cal1.getTime());
-
-        r.setId(5);
-        r.setDatenTime(stime);
-        r.setValue("8");
-
-        DatabaseClass insData = new DatabaseClass(this);
-        insData.open();
-        insData.insertdata(r);
-        insData.close();
-
-
-            r.setId(1);
-            r.setDatenTime(stime);
-            r.setValue("10");
-
-            DatabaseClass insData1 = new DatabaseClass(this);
-            insData1.open();
-            insData1.insertdata(r);
-            insData1.close();
-
-      /*  //dbhelper.onCreate(SQ);
-        r = new Records();
-
-        Calendar cal1 = Calendar.getInstance();
-        SimpleDateFormat time = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
-
-        String stime = time.format(cal1.getTime());
-
-        r.setId(1);
-        r.setDatenTime(stime);
-        r.setValue("10");
-
-        dbhelper.insertdata(r);
-
-        Calendar cal = Calendar.getInstance();
-        SimpleDateFormat time1 = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
-
-        String stime1 = time1.format(cal1.getTime());
-        r.setId(2);
-        r.setDatenTime(stime1);
-        r.setValue("12");
-
-        //  Toast.makeText(this, stime, Toast.LENGTH_LONG).show();
-
-        dbhelper.insertdata(r);
-
-        Calendar cal2 = Calendar.getInstance();
-        SimpleDateFormat time2 = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
-
-        String stime2 = time2.format(cal1.getTime());
-        r.setId(3);
-        r.setDatenTime(stime2);
-        r.setValue("7");
-
-        Toast.makeText(this, stime, Toast.LENGTH_LONG).show();
-
-        dbhelper.insertdata(r);
-        */
-
-    }
-
-    public void view_graph(View v){
-        Intent i = new Intent(this,display_graph.class);
-        startActivity(i);
+            DatabaseClass insData = new DatabaseClass(this);
+            insData.open();
+            insData.insertdata(r);
+            int x = insData.countRowsWeek();
+            x = x/7;
+            x++;
+            wr.setWeekNo("week"+x);
+            insData.insertweekdata(wr);
+            insData.close();
     }
 
     public void bargraph(View view) {
@@ -192,8 +121,50 @@ public final class Main2Activity extends BaseActivity {
         startActivity(i);
     }
 
+    public void firstclick(View view) {
+        Intent i = new Intent(this, Main4Activity.class);
+        startActivity(i);
 
-    @Override
+    }
+
+}
+
+/*
+private static final String DEVICE_NAME = "DEVICE_NAME";
+    private static final String LOG = "LOG";
+
+private static final SimpleDateFormat timeformat = new SimpleDateFormat("HH:mm:ss.SSS");
+
+    private static String MSG_NOT_CONNECTED;
+    private static String MSG_CONNECTING;
+    private static String MSG_CONNECTED;
+
+    private static DeviceConnector connector;
+    private static BluetoothResponseHandler mHandler;
+    private String deviceName;
+
+    TextView recieved_packet;
+
+//in oncreate
+
+            if (mHandler == null)
+                mHandler = new BluetoothResponseHandler(this);
+            else mHandler.setTarget(this);
+
+        MSG_NOT_CONNECTED = getString(R.string.msg_not_connected);
+        MSG_CONNECTING = getString(R.string.msg_connecting);
+        MSG_CONNECTED = getString(R.string.msg_connected);
+
+        recieved_packet = (TextView) findViewById(R.id.recieved_packet);
+
+        if (isConnected() && (savedInstanceState != null)) {
+            setDeviceName(savedInstanceState.getString(DEVICE_NAME));
+        } else getSupportActionBar().setSubtitle(MSG_NOT_CONNECTED);
+
+
+
+//functions
+@Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putString(DEVICE_NAME, deviceName);
@@ -204,7 +175,6 @@ public final class Main2Activity extends BaseActivity {
     }
 
     @SuppressLint("DefaultLocale")
-
     private boolean isConnected() {
         return (connector != null) && (connector.getState() == DeviceConnector.STATE_CONNECTED);
     }
@@ -222,19 +192,17 @@ public final class Main2Activity extends BaseActivity {
     }
 
     @Override
-    public boolean onSearchRequested() {
+    public boolean onSearchRequested()
+    {
         if (super.isAdapterReady()) startDeviceListActivity();
         return false;
     }
 
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
         getMenuInflater().inflate(R.menu.device_control_activity, menu);
-        final MenuItem bluetooth = menu.findItem(R.id.menu_search);
-        if (bluetooth != null) bluetooth.setIcon(this.isConnected() ?
-                R.drawable.ic_action_device_bluetooth_connected :
-                R.drawable.ic_action_device_bluetooth);
         return true;
     }
 
@@ -261,6 +229,16 @@ public final class Main2Activity extends BaseActivity {
 
     void setRecieveed_data(String data){
         recieved_packet.setText(data);
+        try
+        {
+            float datasend = Float.valueOf(data);
+            insertData(String.valueOf(datasend));
+        }
+        catch (Exception a)
+        {
+            Toast.makeText(this, "Something Wrong", Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     @Override
@@ -308,11 +286,6 @@ public final class Main2Activity extends BaseActivity {
         }
     }
 
-    public void firstclick(View view) {
-        Intent i = new Intent(this, Main4Activity.class);
-        startActivity(i);
-
-    }
 
     private class BluetoothResponseHandler extends Handler {
         private WeakReference<Main2Activity> mActivity;
@@ -378,12 +351,14 @@ public final class Main2Activity extends BaseActivity {
     public void insertData(String receivedData) {
         r = new Records();
         Calendar cal1 = Calendar.getInstance();
-        SimpleDateFormat time = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
+        SimpleDateFormat date = new SimpleDateFormat("dd-MM-yyyy");
+        String entry_data = date.format(cal1.getTime());
 
-        String stime = time.format(cal1.getTime());
+        SimpleDateFormat time = new SimpleDateFormat("HH:MM:SS");
+        String entry_time = time.format(new Date());
 
-        r.setId(3);
-        r.setDatenTime(stime);
+        r.setDate(entry_data);
+        r.setTime(entry_time);
         r.setValue(receivedData);
 
         DatabaseClass insData = new DatabaseClass(this);
@@ -391,9 +366,7 @@ public final class Main2Activity extends BaseActivity {
         insData.insertdata(r);
         insData.close();
     }
-}
-
-
+ */
 
 
 

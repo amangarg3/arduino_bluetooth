@@ -5,32 +5,39 @@
     density="xhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="8741145116588"
-    token="3973071940970627531"
-    verifier="FIELD_ADDED" >
+    timestamp="7804521936536"
+    token="-3250505100096331501"
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="404" />
+        duration="295" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="596" />
     <task
         name="instant-run-transform"
-        duration="10" />
+        duration="18" />
     <task
         name="verifier"
-        duration="0" />
+        duration="7" />
 
     <artifact
-        location="/home/aman/android_bluetooth_final/build/outputs/apk/android_bluetooth_final-debug.apk"
-        type="MAIN" />
+        location="/home/aman/Downloads/new_swb/arduino_bluetooth_new/build/intermediates/reload-dex/debug/classes.dex"
+        type="RELOAD_DEX" />
 
     <build
-        timestamp="8741145116588"
-        verifier="FIELD_ADDED" >
+        timestamp="7688111742688"
+        verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/home/aman/android_bluetooth_final/build/outputs/apk/android_bluetooth_final-debug.apk"
+            location="/home/aman/Downloads/new_swb/arduino_bluetooth_new/build/outputs/apk/arduino_bluetooth_new-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="14524902602846"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/home/aman/Downloads/new_swb/arduino_bluetooth_new/build/outputs/apk/arduino_bluetooth_new-debug.apk"
             type="MAIN" />
     </build>
 

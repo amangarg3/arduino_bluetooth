@@ -6,17 +6,10 @@ package com.example.android.bluetoothchat;
 
 public class Records {
 
-    private int _id;
+    //private int _id;
     public String value;
-    public String DatenTime;
-
-    public int getId() {
-        return _id;
-    }
-
-    public void setId(int id) {
-        this._id = id;
-    }
+    public String Date;
+    public String Time;
 
     public String getValue() {
         return value;
@@ -26,11 +19,26 @@ public class Records {
         this.value = value;
     }
 
-    public String getDatenTime() {
-        return DatenTime;
+    public String getDate() {
+        return Date;
     }
 
-    public void setDatenTime(String datenTime) {
-        DatenTime = datenTime;
+    public void setDate(String date) {
+        Date = date;
     }
+
+    public String getTime(){return Time;}
+
+    public void setTime(String time){Time = time;}
+
 }
+
+/*
+ public int getId() {
+        return _id;
+    }
+
+    public void setId(int id) {
+        this._id = id;
+    }
+ */

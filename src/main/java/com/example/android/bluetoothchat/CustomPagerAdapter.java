@@ -1,6 +1,7 @@
 package com.example.android.bluetoothchat;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Typeface;
 import android.support.v4.view.PagerAdapter;
@@ -44,8 +45,6 @@ class CustomPagerAdapter extends PagerAdapter {
     String [] Stat = {
             "Good", "Need to improve"
     };
-
-
 
     public CustomPagerAdapter(Context context) {
         mContext = context;
@@ -102,5 +101,7 @@ class CustomPagerAdapter extends PagerAdapter {
     public void destroyItem(ViewGroup container, int position, Object object) {
         container.removeView((LinearLayout) object);
     }
+
+
 
 }
